@@ -1,0 +1,12 @@
+.Footer {
+    background-color: #FFFFFF;
+}
+
+.Footer a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.Footer a:hover {
+    color: #D3E9E7;
+}
