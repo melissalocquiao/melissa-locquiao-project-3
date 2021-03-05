@@ -1,5 +1,5 @@
 import './Header.css';
-import logo from './Assets/logo.png';
+import logo from './assets/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
@@ -10,7 +10,7 @@ const cart = <FontAwesomeIcon icon={faShoppingCart} />
 function Header() {
     return (
         <div className="Header">
-            <div className="Wrapper">
+            <div className="wrapper">
                 <i className="menu">{hamburger}</i>
 
                 <h1>Mel's Cookie
