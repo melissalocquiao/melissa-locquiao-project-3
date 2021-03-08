@@ -5,8 +5,10 @@
 
 .products {
     display: flex;
-    flex-basis: 33%;
+    flex-basis: 33.33333%;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: center;
+    padding: 2% 10%;
+    
 }
