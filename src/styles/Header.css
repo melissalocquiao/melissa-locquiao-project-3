@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap'); 
 
 .Header {
-    background-image: url(./assets/header.jpg);
+    background-image: url(../assets/header.jpg);
     background-size: cover;
     height: 100vh;
     background-position: 50% 15%;

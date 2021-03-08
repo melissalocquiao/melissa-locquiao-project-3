@@ -1,4 +1,4 @@
-import './Header.css';
+import './styles/Header.css';
 import logo from './assets/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';

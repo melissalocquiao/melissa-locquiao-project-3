@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/App.css';
 import Header from './Header.js';
 import Gallery from './Gallery.js';
 import Footer from './Footer.js';
