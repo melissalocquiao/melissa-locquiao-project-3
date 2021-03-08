@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap'); 
 
 .Header {
-    background-image: url(../assets/header.jpg);
+    background-image: url(../header.jpg);
     background-size: cover;
     height: 100vh;
     background-position: 50% 15%;
@@ -23,8 +23,6 @@
     right: 0;
 
     margin: 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
 }
 
 h1 {    
@@ -34,8 +32,6 @@ h1 {
 }
 
 i {
-    font-size: 2rem;
-    color: #84C4BF;
     position: absolute;
 }
 
