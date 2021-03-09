@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
 .App {
-  text-align: center; 
   font-family: "Roboto", sans-serif;
 }
 
@@ -14,14 +13,23 @@ font-family: 'Dancing Script', cursive;
 } 
 
 h1 {
-  font-size: 5rem;
+  font-size: 6rem;
 }
 
 h2 {
   font-size: 4rem;
 }
 
+h1, h2, h3, h4 {
+  text-align: center;
+}
+
 i {
   font-size: 3rem;
   color: #84C4BF;
+  /* color: #FFFFFF; */
+}
+
+a {
+  color: #000000;
 }

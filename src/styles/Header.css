@@ -5,44 +5,49 @@
     background-size: cover;
     height: 100vh;
     background-position: 50% 15%;
+    padding: 10px;
 }
 
-.wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 90%;
-}
 
-.logo {
-    width: 100px;
-    height: 100px;
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1% 5%;
+} 
 
-    position: relative;
-    top: 40px;
+h1 {
+    position: absolute;
+    top: 0;
     left: 0;
     right: 0;
 
-    margin: 0 auto;
+
 }
 
-h1 {    
-    display: inline-block;
-    position: relative;
-    top: -40px;
+.nav {
+    padding: 0;
+    list-style: none;
 }
 
-i {
-    position: absolute;
+li {
+    display: inline;
+    margin-right: 30px;
 }
 
-.menu {
-    top: 50px;
-    left: 0;
-    margin-left: 7%;
+li a {
+    text-decoration: none;
+}
+
+.Header img {
+    width: 100px;
+    height: 100px; 
+    display: block;
 }
 
 .cart {
-    top: 45px;
-    right: 0;
-    margin-right: 7%;
+    /* float: right;
+    position: relative;
+    top: 40px;
+    right: 40px; */
 }

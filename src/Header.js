@@ -4,21 +4,28 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
-const hamburger = <FontAwesomeIcon icon={faBars} />
+const menu = <FontAwesomeIcon icon={faBars} />
 const cart = <FontAwesomeIcon icon={faShoppingCart} />
 
 function Header() {
     return (
         <div className="Header">
-            <div className="wrapper">
-                <i className="menu">{hamburger}</i>
+            <div className="flex">
+                {/* <ul className="nav">
+                    <li><a href="">About</a></li>
+                    <li><a href="">Flavors</a></li>
+                    <li><a href="">Gallery</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul> */}
+                <img src={logo} alt={"mel's cookie dough co. logo"}></img>
 
-                <h1>Mel's Cookie
-        <img src={logo} alt={"mel's cookie dough co. logo"} className="logo"></img>
-        Dough Co.</h1>
-
-                <i className="cart">{cart}</i>
+                <div className="cart">
+                    <i className="cart">{cart}</i>
+                    {/* <p>Cart</p> */}
+                </div>
             </div>
+
+            <h1>Mel's Cookie Dough Co.</h1>
         </div>
     );
 }
