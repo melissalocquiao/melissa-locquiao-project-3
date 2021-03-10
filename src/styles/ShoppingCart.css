@@ -1,0 +1,36 @@
+.ShoppingCart {
+    z-index: 2;
+}
+
+.ShoppingCart .item-container {
+    margin-top: 5%;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.ShoppingCart .img-container {
+    width: 30%;
+}
+
+.ShoppingCart .text-container {
+    width: 60%;
+    padding: 15px;
+}
+
+.ShoppingCart .text-container h3,.ShoppingCart .text-container h4 {
+    text-align: left;
+}
+
+.ShoppingCart .img-container img {
+    width: 100%;
+}
+
+.trash {
+    font-size: 1.5rem;
+}
+
+.delete {
+    padding: 0;
+}

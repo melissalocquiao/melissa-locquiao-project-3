@@ -1,9 +1,8 @@
 import './styles/Gallery.css';
-import Product from './Product';
 import firebase from './firebase.js';
 import { useState, useEffect } from 'react';
 
-function Gallery() {
+function Gallery(props) {
 
   //Initialize state for products data within gallery
   const [productsArray, setProductsArray] = useState([]);
@@ -35,7 +34,8 @@ function Gallery() {
           type: productData[productKey].type,
           img: productData[productKey].img,
           alt: productData[productKey].alt,
-          price: priceFloat
+          price: priceFloat,
+          cartCount: 0
         });
       }
 
@@ -45,6 +45,7 @@ function Gallery() {
 
   }, []);
 
+
   return (
     <div className="Gallery">
       <h2>Products</h2>
@@ -52,13 +53,16 @@ function Gallery() {
         {
           productsArray.map((product) => {
             return (
-              <Product
-                key={product.key}
-                imgSrc={product.img}
-                altText={product.alt}
-                title={product.title}
-                price={product.price}
-              />
+              <div className="product" key={product.key}>
+                <div className="img-container">
+                  <img src={product.img} alt={product.alt} />
+                  <div className="overlay" onClick={() => { props.productAdded(product) }}>
+                    <div className="text">Add To Cart</div>
+                  </div>
+                </div>
+                <h3>{product.title}</h3>
+                <h4>{product.price}</h4>
+              </div>
             )
           })
         }
