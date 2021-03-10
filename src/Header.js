@@ -3,8 +3,6 @@ import logo from './logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
-
-// const menu = <FontAwesomeIcon icon={faBars} />
 const cart = <FontAwesomeIcon icon={faShoppingCart} />
 
 function Header(props) {
