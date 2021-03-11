@@ -1,9 +1,9 @@
-.Gallery {
+.Inventory {
     background-color: #D3E9E7;
     padding: 2%; 
 }
 
-.products {
+.inventory-container {
     display: flex;
     flex-basis: 33.33333%;
     flex-wrap: wrap;
@@ -13,7 +13,7 @@
     
 }
 
-.product {
+.item {
     padding: 2%;
     width: 28%;
     
@@ -28,7 +28,7 @@
     /* display: block; */
 }
 
-.product img {
+.item img {
     width: 100%;
     display: block;
 }
@@ -38,7 +38,7 @@ h3, h4 {
     padding: 0;
 }
 
-.product h3 {
+.item h3 {
     font-weight: 400;
 }
 

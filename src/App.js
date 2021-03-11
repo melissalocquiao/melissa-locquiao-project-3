@@ -1,7 +1,7 @@
 import './styles/App.css';
 import Header from './Header.js';
 import ShoppingCart from './ShoppingCart.js'
-import Gallery from './Gallery.js';
+import Inventory from './Inventory.js';
 import Footer from './Footer.js';
 import { useState } from 'react';
 
@@ -19,13 +19,13 @@ function App() {
     setIsVisible(!isVisible);
   }
 
-  //Function to hide cart from user
+  //Method to hide cart from user
   const hideCart = () => {
     //Set visibility state to opposite of current state
     setIsVisible(!isVisible);
   }
 
-  //Function to add item to cart
+  //Method to add item to cart
   const itemAdded = (item) => {
     //Make a copy of the original array state
     const cartArray = [...addToCart];
@@ -59,7 +59,7 @@ function App() {
     }
   }
 
-  //Function to remove item from cart
+  //Method to remove item from cart
   const productRemoved = (item) => {
     //Make a copy of the original array state
     const cartArray = [...addToCart];
@@ -93,7 +93,7 @@ function App() {
     <div className="App">
       <Header toggleCart={toggleCart} />
       {isVisible && <ShoppingCart hideCart={hideCart} items={addToCart} productRemoved={productRemoved} />}
-      <Gallery itemAdded={itemAdded} />
+      <Inventory itemAdded={itemAdded} />
       <Footer />
     </div>
   );
