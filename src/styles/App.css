@@ -155,7 +155,7 @@ button:active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1% 5%;
+  /* margin: 1% 5%; */
 } 
 
 .logo {
@@ -174,9 +174,7 @@ button:active {
   flex-basis: 33.33333%;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  padding: 2% 5%;
-  
+  justify-content: center;  
 }
 
 .item {
@@ -194,6 +192,11 @@ button:active {
 
 .item img {
   display: block;
+}
+
+.Inventory h3, .Inventory h4 {
+  padding: 1%;
+  margin: 0;
 }
 
 .overlay {
@@ -221,7 +224,7 @@ button:active {
   top: 0;
   right: 0;
   background-color: #FFFFFF;
-  width: 35%;
+  width: 30%;
   height: 100%;
   z-index: 2;
 }
@@ -245,6 +248,7 @@ button:active {
 .ShoppingCart .text-container h3,
 .ShoppingCart .text-container h4 {
   text-align: left;
+  margin: 3%;
 }
 
 .ShoppingCart button {
@@ -254,7 +258,7 @@ button:active {
 .total {
   position: fixed;
   bottom: 0;
-  width: 35%;
+  width: 30%;
   height: 20vh;
   z-index: 3;
 }

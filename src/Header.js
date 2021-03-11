@@ -8,7 +8,7 @@ const bag = <FontAwesomeIcon icon={faShoppingBag} />
 function Header(props) {
     return (
         <div className="Header">
-            <div className="flex">
+            <div className="flex wrapper">
                 <div className="logo">
                     <img src={logo} alt={"mel's cookie dough co. logo"}></img>
                 </div>

@@ -45,7 +45,7 @@ function Inventory(props) {
   return (
     <div className="Inventory">
       <h2>Products</h2>
-      <div className="inventory-container">
+      <div className="inventory-container wrapper">
         {
           inventoryArray.map((item) => {
             return (
@@ -57,7 +57,7 @@ function Inventory(props) {
                   </div>
                 </div>
                 <h3>{item.title}</h3>
-                <h4>{item.price}</h4>
+                <h4>${item.price}</h4>
               </div>
             )
           })
