@@ -28,7 +28,7 @@ function ShoppingCart(props) {
     return (
         < div className="ShoppingCart" >
             <button className="closeCart" onClick={props.hideCart}>
-                <i className="close">{close}</i>
+                <i className="close" aria-hidden="true">{close}</i>
             </button >
             <h3>Cart</h3>
             {
@@ -46,7 +46,7 @@ function ShoppingCart(props) {
                                 </div>
                                 <div className="text-container">
                                     <button className="delete" onClick={() => { props.productRemoved(item) }}>
-                                        <i className="trash">{trash}</i>
+                                        <i className="trash" aria-hidden="true">{trash}</i>
                                     </button>
                                     <h3>{item.title}</h3>
                                     <h4>${item.price}</h4>

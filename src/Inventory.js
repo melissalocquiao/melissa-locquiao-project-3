@@ -43,7 +43,7 @@ function Inventory(props) {
 
 
   return (
-    <section className="Inventory">
+    <main className="Inventory">
       <h2>Products</h2>
       <div className="inventory-container wrapper">
         {
@@ -63,7 +63,7 @@ function Inventory(props) {
           })
         }
       </div>
-    </section>
+    </main>
   );
 }
 

@@ -382,7 +382,7 @@ hr {
   }
 
   .Inventory .item h3 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 
   .Inventory .item h4 {
@@ -415,7 +415,8 @@ hr {
   }
 
   .logo {
-    display: none;
+    visibility: hidden;
+    position: absolute;
   }
 
   .header-flex {
@@ -512,4 +513,20 @@ hr {
   .total h4 {
     padding: 0 6%;
   }
+}
+
+/*Small Devices*/
+@media only screen and (max-width: 380px) {
+  h1 {
+    font-size: 3.8rem;
+  }
+
+  .cart {
+    font-size: 3rem;
+  }
+
+  .Inventory .overlay {
+    bottom: -50%;
+  }
+
 }
