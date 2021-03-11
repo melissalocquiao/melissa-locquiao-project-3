@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 function Inventory(props) {
   //Initialize state for inventory data
   const [inventoryArray, setInventoryArray] = useState([]);
+  //Initialize state for loading data
+  const [isLoading, setIsLoading] = useState(true);
 
   //Define our useEffect Hook
   useEffect(() => {
@@ -38,6 +40,8 @@ function Inventory(props) {
 
       //Update state with inventory array
       setInventoryArray(inventory);
+      //Set is loading state to false;
+      setIsLoading(false);
     })
   }, []);
 
@@ -46,7 +50,10 @@ function Inventory(props) {
       <h2>Products</h2>
       <div className="inventory-container wrapper">
         {
-          /*Error handling if error with database data*/
+          //Display message if data is still loading
+          isLoading? <h2>Loading products...</h2>
+          :
+          //Error handling if error with database data
           inventoryArray.length === 0 ?
             <h2>No products found! Check back later.</h2>
             :
