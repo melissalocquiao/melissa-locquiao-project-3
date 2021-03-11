@@ -51,12 +51,6 @@ function App() {
 
     //Update state array with new updated array
     setAddToCart(cartArray);
-
-    //If visibility state is false
-    if (isVisible === false) {
-      //Set visibility to true
-      setIsVisible(!isVisible);
-    }
   }
 
   //Method to remove item from cart

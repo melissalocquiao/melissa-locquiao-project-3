@@ -58,6 +58,7 @@ function ShoppingCart(props) {
                 }
             </div>
             <div className="total">
+                <hr></hr>
                 <h4>Total: ${total}</h4>
                 <div className="checkOut">
                     <button className="checkOutButton">Checkout</button>

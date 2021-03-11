@@ -74,7 +74,7 @@ a, .Footer p {
 }
 
 i {
-  font-size: 3rem;
+  font-size: 4rem;
   color: #84C4BF;
 }
 
@@ -105,11 +105,16 @@ button:active {
 }
 
 .trash {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  margin: 1%;
 }
 
 .closeCart {
   margin: 20px;
+}
+
+.close {
+  font-size: 3rem;
 }
 
 .delete {
@@ -151,27 +156,27 @@ button:active {
   padding: 10px;
 }
 
-.flex {
+.header-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
   /* margin: 1% 5%; */
+  padding-top: 1%;
 } 
 
 .logo {
   display: block;
-  width: 8%;
+  width: 10%;
 }
 
 /*Inventory Component Styles*/
 .Inventory {
   background-color: #D3E9E7;
-  padding: 2%; 
+  padding: 5% 2% 5% 2%; 
 }
 
 .inventory-container {
   display: flex;
-  flex-basis: 33.33333%;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;  
@@ -212,6 +217,7 @@ button:active {
   align-items: center;
   text-transform: uppercase;
   letter-spacing: 2px;
+  transition: all 0.2s cubic-bezier(.4,0,.2,1);
 }
 
 .overlay:hover {
@@ -229,6 +235,10 @@ button:active {
   z-index: 2;
 }
 
+.ShoppingCart h3 {
+  font-size: 2.4rem;
+}
+
 .ShoppingCart .item-container {
   padding: 15px;
   display: flex;
@@ -241,7 +251,7 @@ button:active {
 
 .ShoppingCart .text-container {
   width: 60%;
-  padding: 15px;
+  padding: 0 20px 0 15px;
   position: relative;
 }
 
@@ -249,6 +259,7 @@ button:active {
 .ShoppingCart .text-container h4 {
   text-align: left;
   margin: 3%;
+  font-size: 1.5rem;
 }
 
 .ShoppingCart button {
@@ -263,14 +274,20 @@ button:active {
   z-index: 3;
 }
 
+hr {
+  color: #D3E9E7;
+  width: 90%;
+  margin: auto;
+}
+
 .total h4 {
   text-align: right;
-  padding: 4%;
+  padding: 4% 10%;
 }
 
 .ShoppingCart .items {
   margin-bottom: 5%;
-  height: 60vh;
+  height: 55vh;
   overflow-y: scroll;
 }
 
@@ -287,4 +304,212 @@ button:active {
 
 .Footer a:hover {
   color: #D3E9E7;
+}
+
+/*Media Queries*/
+/*Extra Large Devices*/
+@media only screen and (max-width: 1200px) {
+  .checkOutButton {
+    width: 40%;
+  }
+}
+
+/*Large Devices*/
+@media only screen and (max-width: 992px) {
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 4.5rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+  }
+
+  .cart {
+    font-size: 3.5rem;
+  }
+
+  .Inventory .item h3 {
+    font-size: 1.5rem;
+  }
+
+  .Inventory .overlay p {
+    font-size: 1.3rem;
+  }
+
+  .ShoppingCart {
+    width: 35%;
+  }
+
+  .ShoppingCart .text-container h3 {
+    font-size: 1.6rem;
+  }
+
+  .ShoppingCart .text-container h4 {
+    font-size: 1.4rem;
+  }
+
+  .ShoppingCart .total {
+    width: 35%;
+  }
+
+  .ShoppingCart .total h4 {
+    font-size: 1.6rem;
+  }
+}
+
+/*Medium Devices*/
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  .logo {
+    width: 12%;
+  }
+
+  .header-flex {
+    padding: 0;
+  }
+
+  .Inventory .item {
+    width: 40%;
+    padding: 4%;
+    margin-top: 5%;
+  }
+
+  .Inventory .item h3 {
+    font-size: 1.4rem;
+  }
+
+  .Inventory .item h4 {
+    font-size: 1.5rem;
+  }
+
+  .Inventory .overlay {
+    opacity: 1;
+    bottom: -45%;
+  }
+
+  .ShoppingCart {
+    width: 50%;
+  }
+
+  .ShoppingCart .total {
+    width: 50%;
+  }
+}
+
+/*Small Devices*/
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 4.5rem;
+    padding-top: 1%;
+  }
+
+  .cart {
+    font-size: 2.5rem;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .header-flex {
+    justify-content: end;
+  }
+
+  .Header button {
+    padding: 7% 2%;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  .Inventory .item {
+    width: 70%;
+    margin-bottom: 20%;
+  }
+
+  .Inventory .item h3 {
+    font-size: 2rem;
+  }
+
+  .Inventory .item h4 {
+    font-size: 1.8rem;
+  }
+
+  .Inventory .overlay p {
+    font-size: 1.6rem;
+  }
+
+  .ShoppingCart h3 {
+    font-size: 3rem;
+  }
+
+  .ShoppingCart h4 {
+    font-size: 2rem;
+  }
+
+  .checkOutButton {
+    width: 60%;
+  }
+  
+  .ShoppingCart .text-container {
+    padding: 1%;
+  }
+
+  .delete {
+    bottom: 0;
+    top: initial;
+    margin: 8%;
+  }
+
+  .ShoppingCart .items {
+    height: 50vh;
+  }
+
+  .trash {
+    font-size: 2rem;
+  }
+
+  .Footer p {
+    font-size: 1.8rem;
+  }
+}
+
+  /*X-Small Devices*/
+@media only screen and (max-width: 450px) {
+
+  .header-flex {
+    justify-content: center;
+    padding-top: 15%;
+  }
+
+  .cart {
+    font-size: 3.5rem;
+  }
+
+  .ShoppingCart {
+    width: 100%;
+    overflow-y: hidden;
+  }
+
+  .ShoppingCart .total {
+    width: 100%;
+  }
+
+  .delete {
+    bottom: initial;
+    top: 0;
+    margin: 5%;
+  }
+
+  .total h4 {
+    padding: 0 6%;
+  }
 }
