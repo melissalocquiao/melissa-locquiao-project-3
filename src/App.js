@@ -12,8 +12,6 @@ function App() {
   //Initialize state to add products to cart
   const [addToCart, setAddToCart] = useState([]);
 
-  // const [cartUpdated, setCartUpdated] = useState("");
-
   //Event listener for cart side bar toggle
   const toggleCart = () => {
     setIsVisible(!isVisible);
@@ -22,7 +20,7 @@ function App() {
   const hideCart = () => {
     setIsVisible(!isVisible);
   }
-  
+
   const productAdded = (product) => {
     const cartArray = [...addToCart];
 
@@ -66,7 +64,7 @@ function App() {
   return (
     <div className="App">
       <Header toggleCart={toggleCart} />
-      {isVisible && <ShoppingCart hideCart={hideCart} items={addToCart} productRemoved={productRemoved} />}
+      {isVisible && <ShoppingCart hideCart={hideCart} items={addToCart} productRemoved={productRemoved}/>}
       <Gallery productAdded={productAdded} />
       <Footer />
     </div>

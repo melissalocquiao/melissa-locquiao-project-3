@@ -1,9 +1,9 @@
 import './styles/Header.css';
 import logo from './logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import {faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 
-const cart = <FontAwesomeIcon icon={faShoppingCart} />
+const bag = <FontAwesomeIcon icon={faShoppingBag} />
 
 function Header(props) {
 
@@ -14,7 +14,7 @@ function Header(props) {
                     <img src={logo} alt={"mel's cookie dough co. logo"}></img>
                 </div>
                 <button onClick={props.toggleCart}>
-                    <i className="cart">{cart}</i>
+                    <i className="cart">{bag}</i>
                 </button>                
             </div>
 

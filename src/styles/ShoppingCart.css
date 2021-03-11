@@ -1,6 +1,6 @@
 .ShoppingCart {
     z-index: 2;
-    overflow-y: scroll;
+
 }
 
 .ShoppingCart .closeCart {
@@ -8,8 +8,7 @@
 }
 
 .ShoppingCart .item-container {
-    margin-top: 5%;
-    padding: 25px;
+    padding: 15px;
     display: flex;
     justify-content: center;
 }
@@ -47,19 +46,51 @@
 }
 
 .total {
-    position: relative;
-    bottom: 20px;
-    right: 100px;
+    position: fixed;
+    bottom: 0;
+    width: 35%;
+    height: 20vh;
+    background-color: #FFFFFF;
+    color: #000000;
+    z-index: 3;
 }
 
-.total h3 {
-    text-align: right;
-}
 
 .ShoppingCart h4 {
-    margin-top: 2%;
+    margin-top: 3%;
+}
+
+.total h4 {
+    text-align: right;
+    padding: 4%;
 }
 
 .ShoppingCart .items {
     margin-bottom: 5%;
+    height: 60vh;
+    overflow-y: scroll;
+}
+
+.checkOut {
+    text-align: center;
+}
+
+.checkOutButton {
+    text-transform: uppercase;
+    border: none;
+    padding: 1.5rem;
+    margin: 0 auto;
+    outline: none;
+    letter-spacing: 0.4rem;
+    border-radius: 3px;
+    font-size: 1.4rem;
+    transition: all 0.2s cubic-bezier(.4,0,.2,1);
+    background-color: #D3E9E7;
+    height: 4.5rem;
+    width: 35%;
+}
+
+.checkOutButton:hover, .checkOutButton:focus {
+    background-color: #84C4BF;
+    color: #FFFFFF;
 }
