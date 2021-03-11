@@ -35,18 +35,18 @@ function App() {
       //Get the index of the item in the array
       const index = cartArray.findIndex(x => x.key === item.key);
       //Get the quantity of the item in the cart
-      const count = item.cartCount;
+      const count = item.quantity;
       //Update quantity value of item in state
-      cartArray[index].cartCount = count + 1;
+      cartArray[index].quantity = count + 1;
     } else { //If cart does not contain item
       //Add item to cart
       cartArray.push(item);
       //Get the index of the item in the array
       const index = cartArray.findIndex(x => x.key === item.key);
       //Get the quantity of the item in the cart
-      const count = item.cartCount;
+      const count = item.quantity;
       //Update quantity value of item in state
-      cartArray[index].cartCount = count + 1;
+      cartArray[index].quantity = count + 1;
     }
 
     //Update state array with new updated array
@@ -69,17 +69,17 @@ function App() {
       //Get the index of the item in the array
       const index = cartArray.findIndex(x => x.key === item.key);
       //Get the quantity of the item in the cart
-      const count = item.cartCount;
+      const count = item.quantity;
       //Update quantity value of item in state
-      cartArray[index].cartCount = count - 1;
+      cartArray[index].quantity = count - 1;
 
       //If quantity of item in cart is greater than 0
-      if (cartArray[index].cartCount > 0) {
+      if (cartArray[index].quantity > 0) {
         //Update quatity of item in cart
-        cartArray[index].cartCount = count - 1;
+        cartArray[index].quantity = count - 1;
       }
       //If quantity of item is 0
-      if (cartArray[index].cartCount === 0) {
+      if (cartArray[index].quantity === 0) {
         //Remove item from cart
         cartArray.splice(index, 1);
       }

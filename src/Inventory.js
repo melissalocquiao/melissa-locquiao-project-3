@@ -32,7 +32,7 @@ function Inventory(props) {
           img: inventoryData[inventoryKey].img,
           alt: inventoryData[inventoryKey].alt,
           price: priceFloat,
-          cartCount: 0
+          quantity: 0
         });
       }
 

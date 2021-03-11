@@ -12,7 +12,7 @@ function ShoppingCart(props) {
     //For each item in cart
     props.items.forEach((item) => {
         //Add amount of items in cart
-        count = count + item.cartCount;
+        count = count + item.quantity;
     })
 
     //Create a variable for total value in cart
@@ -20,7 +20,7 @@ function ShoppingCart(props) {
     //For each item i ncart
     props.items.forEach((item) => {
         //Add total amount of value in cart
-        total = total + (item.cartCount * item.price);
+        total = total + (item.quantity * item.price);
     })
     //Convert total to a float
     total = parseFloat(total).toFixed(2);
@@ -50,7 +50,7 @@ function ShoppingCart(props) {
                                     </button>
                                     <h3>{item.title}</h3>
                                     <h4>${item.price}</h4>
-                                    <h4>Quantity: {item.cartCount}</h4>
+                                    <h4>Quantity: {item.quantity}</h4>
                                 </div>
                             </div>
                         )
