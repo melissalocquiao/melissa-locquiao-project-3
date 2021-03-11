@@ -5,72 +5,98 @@ import Gallery from './Gallery.js';
 import Footer from './Footer.js';
 import { useState } from 'react';
 
+//App Component that 
 function App() {
 
+  //Initialize cart visibility state to false
   const [isVisible, setIsVisible] = useState(false);
-
-  //Initialize state to add products to cart
+  //Initialize state to add products to cart with empty array
   const [addToCart, setAddToCart] = useState([]);
 
   //Event listener for cart side bar toggle
   const toggleCart = () => {
+    //Set visibility state to opposite of current state
     setIsVisible(!isVisible);
   }
 
+  //Function to hide cart from user
   const hideCart = () => {
+    //Set visibility state to opposite of current state
     setIsVisible(!isVisible);
   }
 
-  const productAdded = (product) => {
+  //Function to add item to cart
+  const itemAdded = (item) => {
+    //Make a copy of the original array state
     const cartArray = [...addToCart];
 
-    if (cartArray.includes(product)) {
-      const index = cartArray.findIndex(x => x.key === product.key);
-      const count = product.cartCount;
+    //If cart contains item
+    if (cartArray.includes(item)) {
+      //Get the index of the item in the array
+      const index = cartArray.findIndex(x => x.key === item.key);
+      //Get the quantity of the item in the cart
+      const count = item.cartCount;
+      //Update quantity value of item in state
       cartArray[index].cartCount = count + 1;
-    } else {
-      cartArray.push(product);
-      const index = cartArray.findIndex(x => x.key === product.key);
-      const count = product.cartCount;
+    } else { //If cart does not contain item
+      //Add item to cart
+      cartArray.push(item);
+      //Get the index of the item in the array
+      const index = cartArray.findIndex(x => x.key === item.key);
+      //Get the quantity of the item in the cart
+      const count = item.cartCount;
+      //Update quantity value of item in state
       cartArray[index].cartCount = count + 1;
     }
 
+    //Update state array with new updated array
     setAddToCart(cartArray);
 
+    //If visibility state is false
     if (isVisible === false) {
+      //Set visibility to true
       setIsVisible(!isVisible);
     }
-
   }
 
-  const productRemoved = (product) => {
+  //Function to remove item from cart
+  const productRemoved = (item) => {
+    //Make a copy of the original array state
     const cartArray = [...addToCart];
 
-    if (cartArray.includes(product)) {
-      const index = cartArray.findIndex(x => x.key === product.key);
-      const count = product.cartCount;
+    //If item is in cart
+    if (cartArray.includes(item)) {
+      //Get the index of the item in the array
+      const index = cartArray.findIndex(x => x.key === item.key);
+      //Get the quantity of the item in the cart
+      const count = item.cartCount;
+      //Update quantity value of item in state
       cartArray[index].cartCount = count - 1;
+
+      //If quantity of item in cart is greater than 0
       if (cartArray[index].cartCount > 0) {
+        //Update quatity of item in cart
         cartArray[index].cartCount = count - 1;
       }
+      //If quantity of item is 0
       if (cartArray[index].cartCount === 0) {
-        cartArray.splice(index,1);
+        //Remove item from cart
+        cartArray.splice(index, 1);
       }
     }
 
+    //Update state array with new updated array
     setAddToCart(cartArray);
   }
 
   return (
     <div className="App">
       <Header toggleCart={toggleCart} />
-      {isVisible && <ShoppingCart hideCart={hideCart} items={addToCart} productRemoved={productRemoved}/>}
-      <Gallery productAdded={productAdded} />
+      {isVisible && <ShoppingCart hideCart={hideCart} items={addToCart} productRemoved={productRemoved} />}
+      <Gallery itemAdded={itemAdded} />
       <Footer />
     </div>
   );
 }
 
 export default App;
-
-// 

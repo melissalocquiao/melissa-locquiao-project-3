@@ -56,7 +56,7 @@ function Gallery(props) {
               <div className="product" key={product.key}>
                 <div className="img-container">
                   <img src={product.img} alt={product.alt} />
-                  <div className="overlay" onClick={() => { props.productAdded(product, productsArray) }}>
+                  <div className="overlay" onClick={() => { props.itemAdded(product, productsArray) }}>
                     <div className="text">Add To Cart</div>
                   </div>
                 </div>
