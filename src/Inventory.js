@@ -51,32 +51,32 @@ function Inventory(props) {
       <div className="inventory-container wrapper">
         {
           //Display message if data is still loading
-          isLoading? <h2>Loading products...</h2>
-          :
-          //Error handling if error with database data
-          inventoryArray.length === 0 ?
-            <h2>No products found! Check back later.</h2>
+          isLoading ? <h2>Loading products...</h2>
             :
-            inventoryArray.map((item) => {
-              return (
-                <div className="item" key={item.key}>
-                  <div className="img-container">
-                    {
-                      item.img === "" || item.img === null ?
-                        <div className="img-placeholder">
-                          <p>No image found.</p></div>
-                        :
-                    <img src={item.img} alt={item.alt} />
-                    }
-                    <div className="overlay" onClick={() => { props.itemAdded(item, inventoryArray) }}>
-                      <p>Add to cart</p>
+            //Error handling if error with database data
+            inventoryArray.length === 0 ?
+              <h2>No products found! Check back later.</h2>
+              :
+              inventoryArray.map((item) => {
+                return (
+                  <div className="item" key={item.key}>
+                    <div className="img-container">
+                      {
+                        item.img === "" || item.img === null ?
+                          <div className="img-placeholder">
+                            <p>No image found.</p></div>
+                          :
+                          <img src={item.img} alt={item.alt} />
+                      }
+                      <div className="overlay" onClick={() => { props.itemAdded(item, inventoryArray) }}>
+                        <p>Add to cart</p>
+                      </div>
                     </div>
+                    <h3>{item.title}</h3>
+                    <h4>${item.price}</h4>
                   </div>
-                  <h3>{item.title}</h3>
-                  <h4>${item.price}</h4>
-                </div>
-              )
-            })
+                )
+              })
         }
       </div>
     </main>
