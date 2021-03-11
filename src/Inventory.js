@@ -1,4 +1,3 @@
-import './styles/Inventory.css';
 import firebase from './firebase.js';
 import { useState, useEffect } from 'react';
 
@@ -54,7 +53,7 @@ function Inventory(props) {
                 <div className="img-container">
                   <img src={item.img} alt={item.alt} />
                   <div className="overlay" onClick={() => { props.itemAdded(item, inventoryArray) }}>
-                    <div className="text">Add To Cart</div>
+                    <p>Add to cart</p>
                   </div>
                 </div>
                 <h3>{item.title}</h3>

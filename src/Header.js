@@ -1,4 +1,3 @@
-import './styles/Header.css';
 import logo from './logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faShoppingBag } from '@fortawesome/free-solid-svg-icons';
