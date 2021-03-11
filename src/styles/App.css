@@ -199,6 +199,12 @@ button:active {
   display: block;
 }
 
+.Inventory .img-placeholder p {
+  color: #000000;
+  text-align: center;
+}
+
+
 .Inventory h3, .Inventory h4 {
   padding: 1%;
   margin: 0;
