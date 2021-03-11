@@ -4,30 +4,36 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 function ShoppingCart(props) {
-
+    //Store icons
     const trash = <FontAwesomeIcon icon={faTrash} />
     const close = <FontAwesomeIcon icon={faTimes} />
 
+    //Create a variable for cart item counter
     let count = 0;
+    //For each item in cart
     props.items.forEach((item) => {
+        //Add amount of items in cart
         count = count + item.cartCount;
     })
 
+    //Create a variable for total value in cart
     let total = 0;
+    //For each item i ncart
     props.items.forEach((item) => {
+        //Add total amount of value in cart
         total = total + (item.cartCount * item.price);
     })
+    //Convert total to a float
     total = parseFloat(total).toFixed(2);
-
 
     return (
         < div className="ShoppingCart" >
             <button className="closeCart" onClick={props.hideCart}>
                 <i className="close">{close}</i>
             </button >
-            {/* <div className="container"> */}
             <h3>Cart</h3>
             {
+                //If there are items in the cart, show number of items
                 count > 0 &&
                 <h4>{count} Items</h4>
             }
@@ -52,14 +58,13 @@ function ShoppingCart(props) {
                     })
                 }
             </div>
-            {/* </div> */}
             <div className="total">
                 <h4>Total: ${total}</h4>
                 <div className="checkOut">
                     <button className="checkOutButton">Checkout</button>
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
 
