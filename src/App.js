@@ -22,41 +22,45 @@ function App() {
   const hideCart = () => {
     setIsVisible(!isVisible);
   }
-
-  //Event listener for product clicked
+  
   const productAdded = (product) => {
     const cartArray = [...addToCart];
 
-    if (product.cartCount === 0) {
-      product.cartCount = product.cartCount + 1;
-      cartArray.push(product);
+    if (cartArray.includes(product)) {
+      const index = cartArray.findIndex(x => x.key === product.key);
+      const count = product.cartCount;
+      cartArray[index].cartCount = count + 1;
     } else {
-      product.cartCount = product.cartCount + 1;
+      cartArray.push(product);
+      const index = cartArray.findIndex(x => x.key === product.key);
+      const count = product.cartCount;
+      cartArray[index].cartCount = count + 1;
     }
 
     setAddToCart(cartArray);
-    console.log("added ", cartArray);
 
     if (isVisible === false) {
       setIsVisible(!isVisible);
     }
+
   }
 
   const productRemoved = (product) => {
     const cartArray = [...addToCart];
-    if (product.cartCount === 1) {
-      
-      const index = cartArray.indexOf(cartArray[product.key]);
-      // console.log("index",index);
-      product.cartCount = product.cartCount - 1;
-      cartArray.splice(index, 1);
-    } else if (product.cartCount !== 0){
-      product.cartCount = product.cartCount - 1;
+
+    if (cartArray.includes(product)) {
+      const index = cartArray.findIndex(x => x.key === product.key);
+      const count = product.cartCount;
+      cartArray[index].cartCount = count - 1;
+      if (cartArray[index].cartCount > 0) {
+        cartArray[index].cartCount = count - 1;
+      }
+      if (cartArray[index].cartCount === 0) {
+        cartArray.splice(index,1);
+      }
     }
 
     setAddToCart(cartArray);
-
-    console.log("removed ",cartArray);
   }
 
   return (

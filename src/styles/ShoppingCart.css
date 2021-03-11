@@ -1,5 +1,10 @@
 .ShoppingCart {
     z-index: 2;
+    overflow-y: scroll;
+}
+
+.ShoppingCart .closeCart {
+    margin: 20px;
 }
 
 .ShoppingCart .item-container {
@@ -9,7 +14,6 @@
     justify-content: center;
 }
 
-
 .ShoppingCart .img-container {
     width: 30%;
 }
@@ -17,6 +21,7 @@
 .ShoppingCart .text-container {
     width: 60%;
     padding: 15px;
+    position: relative;
 }
 
 .ShoppingCart .text-container h3,.ShoppingCart .text-container h4 {
@@ -31,6 +36,30 @@
     font-size: 1.5rem;
 }
 
-.delete {
+.ShoppingCart button {
     padding: 0;
+}
+
+.delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.total {
+    position: relative;
+    bottom: 20px;
+    right: 100px;
+}
+
+.total h3 {
+    text-align: right;
+}
+
+.ShoppingCart h4 {
+    margin-top: 2%;
+}
+
+.ShoppingCart .items {
+    margin-bottom: 5%;
 }
