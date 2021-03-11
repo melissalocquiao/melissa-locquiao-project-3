@@ -140,6 +140,7 @@ button:active {
   background-color: #D3E9E7;
   height: 4.5rem;
   width: 35%;
+  margin-bottom: 5%;
 }
 
 .checkOutButton:hover, .checkOutButton:focus {
@@ -291,9 +292,14 @@ hr {
   padding: 4% 10%;
 }
 
+.ShoppingCart h3, h4 {
+  padding: 0;
+  margin: 0;
+}
+
 .ShoppingCart .items {
   margin-bottom: 5%;
-  height: 45vh;
+  height: 55vh;
   overflow-y: scroll;
 }
 
@@ -360,6 +366,7 @@ hr {
 
   .ShoppingCart .total {
     width: 35%;
+    height: 45vh;
   }
 
   .ShoppingCart .total h4 {
