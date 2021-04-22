@@ -148,6 +148,25 @@ button:active {
   color: #FFFFFF;
 }
 
+.cartButton {
+  position: fixed;
+  top: 0; 
+  right: 0;
+  margin-top: 10px;
+  margin-right: 40px;
+  padding: 0;
+}
+
+.cart {
+  position: relative;
+}
+
+.count {
+  position: relative;
+  top: 55px;
+  z-index: 1;
+}
+
 /*Header Component Styles*/
 .Header {
   background-image: url(../header.jpg);
@@ -155,19 +174,23 @@ button:active {
   height: 100vh;
   background-position: 50% 15%;
   padding: 10px;
+  position: relative;
 }
 
-.header-flex {
+/* .header-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* margin: 1% 5%; */
   padding-top: 1%;
-} 
+}  */
 
 .logo {
   display: block;
   width: 10%;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  margin: 20px;
 }
 
 /*Inventory Component Styles*/
@@ -344,6 +367,10 @@ hr {
     font-size: 3.5rem;
   }
 
+  .count {
+    top: 50px;
+  }
+
   .Inventory .item h3 {
     font-size: 1.5rem;
   }
@@ -419,17 +446,11 @@ hr {
 /*Small Devices*/
 @media only screen and (max-width: 600px) {
   h1 {
-    font-size: 4.5rem;
-    padding-top: 1%;
+    visibility: hidden;
   }
 
   .cart {
     font-size: 2.5rem;
-  }
-
-  .logo {
-    visibility: hidden;
-    position: absolute;
   }
 
   .header-flex {
@@ -530,10 +551,6 @@ hr {
 
 /*Small Devices*/
 @media only screen and (max-width: 380px) {
-  h1 {
-    font-size: 3.8rem;
-  }
-
   .cart {
     font-size: 3rem;
   }

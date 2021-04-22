@@ -4,10 +4,14 @@ import ShoppingCart from './ShoppingCart.js'
 import Inventory from './Inventory.js';
 import Footer from './Footer.js';
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 
 //App Component that 
 function App() {
 
+  //Store icon in variable
+  const bag = <FontAwesomeIcon icon={faShoppingBag} />
   //Initialize cart visibility state to false
   const [isVisible, setIsVisible] = useState(false);
   //Initialize state to add products to cart with empty array
@@ -83,8 +87,19 @@ function App() {
     setAddToCart(cartArray);
   }
 
+  //Counter of items to show user how many items are in the cart
+  let count = 0;
+  addToCart.forEach((item) => {
+    //Add amount of items in cart
+    count = count + item.quantity;
+  })
+
   return (
     <div className="App">
+      <button onClick={toggleCart} className="cartButton">
+        <p className="count">{count}</p>
+        <i className="cart" aria-hidden="true">{bag}</i>
+      </button>
       <Header toggleCart={toggleCart} />
       {isVisible && <ShoppingCart hideCart={hideCart} items={addToCart} productRemoved={productRemoved} />}
       <Inventory itemAdded={itemAdded} />

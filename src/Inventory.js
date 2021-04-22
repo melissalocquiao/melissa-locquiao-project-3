@@ -42,7 +42,6 @@ function Inventory(props) {
       setInventoryArray(inventory);
       //Set is loading state to false;
       setIsLoading(false);
-      console.log(inventory);
     })
   }, []);
 
